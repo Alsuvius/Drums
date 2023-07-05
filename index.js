@@ -1,5 +1,5 @@
 document.addEventListener("keydown", function(event){
-        // makeSound(event.key);
+        makeSound(event.keyCode);
         buttonAnimation(event.keyCode);
         console.log(event.keyCode);
 })
@@ -15,43 +15,53 @@ function buttonAnimation(currentKey){
 
 function makeSound(key){
     switch (key) {
-        case 'w':
-            let tom1 = new Audio('sounds/tom-1.mp3');
-            tom1.play();
+        case 65:
+            let clap = new Audio('sounds/clap.wav');
+            clap.play();
             break;
 
-        case 'a':
-            let tom2 = new Audio('sounds/tom-2.mp3');
-            tom2.play();
+        case 83:
+            let hihat = new Audio('sounds/hihat.wav');
+            hihat.play();
             break;
 
-        case 's':
-            let tom3 = new Audio('sounds/tom-3.mp3');
-            tom3.play();
-            break;
-
-        case 'd':
-            let tom4 = new Audio('sounds/tom-4.mp3');
-            tom4.play();
-            break;
-
-        case 'j':
-            let snare = new Audio('sounds/snare.mp3');
-            snare.play();
-            break;
-
-        case 'k':
-            let kick = new Audio('sounds/kick-bass.mp3');
+        case 68:
+            let kick = new Audio('sounds/kick.wav');
             kick.play();
             break;
 
-        case 'l':
-            let crash = new Audio('sounds/crash.mp3');
-            crash.play();
+        case 70:
+            let openhat = new Audio('sounds/openhat.wav');
+            openhat.play();
+            break;
+
+        case 71:
+            let boom = new Audio('sounds/boom.wav');
+            boom.play();
+            break;
+
+        case 72:
+            let ride = new Audio('sounds/ride.wav');
+            ride.play();
+            break;
+
+        case 74:
+            let snare = new Audio('sounds/snare.wav');
+            snare.play();
+            break;
+
+        case 75:
+            let tom = new Audio('sounds/tom.wav');
+            tom.play();
+            break;
+
+        case 76:
+            let tink = new Audio('sounds/tink.wav');
+            tink.play();
             break;
 
         default:
-            console.log(buttonInnerHTML);
+            console.log(event.keyCode);
             break;
 }}
 
