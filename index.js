@@ -14,7 +14,7 @@ function buttonAnimation(currentKey){
 
 
 function makeSound(key){
-    let audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    let audio = document.querySelector(`audio[data-key="${key}"]`);
     audio.play();
 }
 
